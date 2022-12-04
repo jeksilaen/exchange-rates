@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register || Exchange Rates</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen w-screen flex items-center justify-center">
+        <div class="w-full max-w-md">
+            <form action="/auth/register" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <div class="mb-4 flex flex-col items-center space-y-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="username">
+                  Enter the confirmation code sent to <span class="text-green-600"><%= email %></span>
+                </label>
+                <input class="shadow appearance-none text-center border rounded w-xs py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="userCode" type="text" placeholder="****" autocomplete="off">
+                <input type="email" name="email" value="<%= email %>" hidden>
+                <input type="password" name="password" value="<%= password %>" hidden>
+                <input type="text" name="secretCode" value="<%= secretCode %>" hidden>
+              </div>
+              <div class="flex items-center justify-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                  Go
+                </button>
+              </div>
+            </form>
+            <p class="text-center text-gray-500 text-xs">
+              &copy;2022 Zacharia Bachtiar
+            </p>
+          </div>
+    </div>
+
+
+    
+    <script src="/reload/reload.js"></script>
+</body>
+</html>
